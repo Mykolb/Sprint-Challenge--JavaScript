@@ -7,28 +7,60 @@
 */
 
 // tyrannosaurus, carnivorous, 7000kg, 12m, Late Cretaceious
+const dinosaur1 = {
+  name: 'tyrannosaurus',
+  diet: 'carnivorous',
+  weight: '7000kg',
+  length: '12m',
+  period: 'Late Cretaceious',
+};
 
 // stegosaurus, herbivorous, 2000kg, 9m, Late Jurassic
-
+const dinosaur2 = {
+  name: 'stegosaurus',
+  diet: 'herbivorous',
+  weight: '2000kg',
+  length: '9m',
+  period: 'Late Jurassic'
+};
 // velociraptor, carnivorous, 15kg, 1.8m, Late Cretaceious
-
+const dinosaur3 = {
+  name: 'velociraptor',
+  diet: 'carnivorous',
+  weight: '15kg',
+  length: '1.8m',
+  period: 'Late Cretaceious'
+};
 // Using your dinosaur objects, log answers to these questions:
 
 // How much did tyrannosaurus weigh?
-console.log();
+console.log(dinosaur1.weight);
 
 // What was the diet of a velociraptor?
-console.log();
+console.log(dinosaur2.diet);
 
 // How long was a stegosaurus?
-console.log();
+console.log(dinosaur2.length);
 
 // What time period did tyrannosaurus live in?
-console.log();
+console.log(dinosaur1.period);
 
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
-console.log();
+
+const dinosaur1 = {
+  name: 'tyrannosaurus',
+  diet: 'carnivorous',
+  weight: '7000kg',
+  length: '12m',
+  period: 'Late Cretaceious',
+  roar: function(noise) {
+    console.log(`${noise}`);
+  }
+}
+
+dinosaur1.roar("RAWERSRARARWERSARARARRRR!");
+
 
 
 // ==== Arrays ====
@@ -46,10 +78,38 @@ const graduates = [{"id":1,"first_name":"Cynde","university":"Missouri Southern 
 {"id":9,"first_name":"Michail","university":"Universidad Católica de Ávila","email":"mrome8@shinystat.com"},
 {"id":10,"first_name":"Hube","university":"Universitat Rovira I Virgili Tarragona","email":"hlethbrig9@foxnews.com"}]
 
-/* Request 1: Create a new array called universities that contains all the univeristies in the graduates array.  
+// Request 1: Create a new array called universities that contains all the univeristies in the graduates array.// 
+
+const universities = [
+  'Missouri Southern State College',
+  'The School of the Art Institute of Chicago',
+  'Marian College',
+  'International Medical & Technological University',
+  'Sultan Salahuddin Abdul Aziz Shah Polytechnic',
+  'Fachhochschule Rosenheim, Hochschule für Technik und Wirtschaft',
+  'Salem University',
+  'Coastal Carolina University',
+  'Universidad Católica de Ávila',
+  'Universitat Rovira I Virgili Tarragona'
+];
+
+
 
 Once you have the new array created, sort the universities alphabetically and log the result. */
-const universities = [];
+const universities = [
+  "Coastal Carolina University",
+   "Fachhochschule Rosenheim, Hochschule für Technik und Wirtschaft", 
+   "International Medical & Technological University",
+   "Marian College",
+   "Missouri Southern State College", 
+   "Salem University", 
+   "Sultan Salahuddin Abdul Aziz Shah Polytechnic", 
+   "The School of the Art Institute of Chicago", 
+   "Universidad Católica de Ávila", 
+   "Universitat Rovira I Virgili Tarragona"
+
+];
+universities.sort();
 console.log(universities)
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. 
@@ -58,12 +118,30 @@ The resulting contact information should have a space between the first name and
 Name email@example.com
 
 Log the result of your new array. */
-const contactInfo = [];
+const contactInfo = [
+  'Cynde ctorry0@macromedia.com',
+  'Saundra swhal1@state.gov',
+  'Lambert lparham2@techcrunch.com',
+  'Modestine mdolder3@symantec.com ',
+  'Chick camorts4@google.com.au',
+  'Jakob harken5@spiegel.de',
+  'Robbi rbrister6@redcross.org',
+  'Colline cbrosh7@alibaba.com',
+  'Michail mrome8@shinystat.com',
+  'Hube hlethbrig9@foxnews.com'
+   ];
+ 
 console.log(contactInfo);
 
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
-const uni = [];
+const uni = [
+  "Coastal Carolina University",
+  "International Medical & Technological University",
+  "Salem University",
+  "Universidad Católica de Ávila", 
+  "Universitat Rovira I Virgili Tarragona"
+];
 console.log(uni);
 
 
