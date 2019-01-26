@@ -7,6 +7,20 @@
   * In the body of the function return the callback with the two parameters that you created
 */
 
+function consumeFood(food1, food2) {
+  console.log(`I like to eat ${food1}, ${food2}`);
+}
+
+function consumeFoodThatIsSweet(callback) {
+  const sweetFood = 'candy';
+  const sweetFood2 = 'donuts';
+  const sweetFood3 = 'chocolate';
+  callback(sweetFood);
+}
+
+consumeFoodThatIsSweet(consumeFood);
+
+
 
 /* Step 2: Create several functions to callback with consume();
   * Create a function named add that returns the sum of two numbers
