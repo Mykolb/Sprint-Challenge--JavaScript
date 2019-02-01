@@ -7,19 +7,33 @@
   * In the body of the function return the callback with the two parameters that you created
 */
 
-function consumeFood(food1, food2) {
-  console.log(`I like to eat ${food1}, ${food2}`);
+function bake(param1, param2, callback) {
+  brownies(param1, param2);
 }
+  function brownies(param1, param2) {
+    console.log(param1 + param2);
+  }
 
-function consumeFoodThatIsSweet(callback) {
-  const sweetFood = 'candy';
-  const sweetFood2 = 'donuts';
-  const sweetFood3 = 'chocolate';
-  callback(sweetFood);
+  function macaroons(param1, param2) {
+    console.log(param1 + param2);
+  };
+
+
+bake('eggs', 'milk', 'macaroons');
+
+
+function consume(param1, param2, callback) {
+  console.log(param1 + param2)
 }
+  function add(param1, param2) {
+  console.log(param1 + param2);
+}
+  function multiply(param1, param2, callback) {
+  console.log(param1 * param2);
+  };
 
-consumeFoodThatIsSweet(consumeFood);
 
+  
 
 
 /* Step 2: Create several functions to callback with consume();
@@ -39,8 +53,8 @@ consumeFoodThatIsSweet(consumeFood);
 
 // Explain in your own words why `nestedfunction()` can access the variable `internal`.
 
-// Explanation: 
-
+// Explanation:When my myFunction is invoked the 2 pass compiler looks looks for a reference. It looks up myFunction. It knows that nestedFunction is invoked and looks for it's reference. 
+//It can't find a reference so it goes to the next function to find it. It grabs the reference from where it orignated because lexicolscope. Closures are awesome little backpacks that store info for later.
 
 const external = "I'm outside the function";
 
@@ -54,3 +68,4 @@ function myFunction() {
   nestedFunction();
 }
 myFunction();
+
