@@ -95,7 +95,7 @@ const universities = [
 
 
 
-Once you have the new array created, sort the universities alphabetically and log the result. */
+/*nce you have the new array created, sort the universities alphabetically and log the result. */
 const universities = [
   "Coastal Carolina University",
    "Fachhochschule Rosenheim, Hochschule für Technik und Wirtschaft", 
