@@ -48,7 +48,7 @@ console.log(dinosaur1.period);
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
 
-const dinosaur1 = {
+const noisyDinosaur = {
   name: 'tyrannosaurus',
   diet: 'carnivorous',
   weight: '7000kg',

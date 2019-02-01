@@ -23,17 +23,17 @@ bake('eggs', 'milk', 'macaroons');
 
 
 function consume(param1, param2, callback) {
-  num(param1 + param2);
+  console.log(param1 + param2)
 }
   function add(param1, param2) {
   console.log(param1 + param2);
 }
-  function multiply(param1, param2) {
+  function multiply(param1, param2, callback) {
   console.log(param1 * param2);
-  }
-  function Greeting(param1, param2, callback) {
-    console.log(`Hello ${param1} ${param2}, nice to meet you.`);
   };
+
+
+  
 
 
 /* Step 2: Create several functions to callback with consume();
