@@ -34,13 +34,15 @@ function CuboidMaker(attr) {
 }
 
 //method
-CuboidMaker.prototype.volume = function() {
-  return `${this.length} * ${this.width} * ${this.height}`;
+CuboidMaker.prototype.volume = function(width, length, height) {
+  const volume = `${this.width}` * `${this.length}` * `${this.height}`;
+   return `${volume}`;
 }
 
 //method
-CuboidMaker.prototype.surfaceArea = function() {
-  return `2* ${this.length} * ${this.width} * ${this.height} + ${this.width} * ${this.height}`;
+CuboidMaker.prototype.surfaceArea = function(width, length, height) {
+  const surfaceArea = 2 *(`${this.length}` * `${this.width}` + `${this.length}` * `${this.height}` + `${this.width}` * `${this.height}`);
+  return `${surfaceArea}`;
 };
 
 
@@ -55,14 +57,6 @@ const cuboid = new CuboidMaker({
 
 console.log(cuboid.volume()); //100
 console.log(cuboid.surfaceArea()); // 130
-
-
-
-
-
-
-
-
 
 
 

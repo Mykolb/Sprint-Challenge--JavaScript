@@ -9,12 +9,14 @@ class CuboidMaker {
     }
   
      //method
-    volume() {
-      return `${this.length} * ${this.width} * ${this.height}`;
+     volume(width, length, height) {
+      const volume = `${this.width}` * `${this.length}` * `${this.height}`;
+      return `${volume}`;
     }
      //method
-    surfaceArea() {
-      return `2* ${this.length} * ${this.width} * ${this.height} + ${this.width} * ${this.height}`;
+     surfaceArea(width, length, height) {
+      const surfaceArea = 2 *(`${this.length}` * `${this.width}` + `${this.length}` * `${this.height}` + `${this.width}` * `${this.height}`);
+      return `${surfaceArea}`;
     };
   }
 
