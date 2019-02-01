@@ -166,7 +166,28 @@ zooAnimals = [{"animal_name":"Jackal, asiatic","population":5,"scientific_name":
 The zoo wants to display both the scientific name and the animal name in front of the habitats.  Return an array with only the animal and scientific names in it.  The individual values in the array should look like this "Name: Jackal, asiatic, Scientific: Canis aureus."
 
 */
-const animalNames = [];
+const animalNames = [
+ {'Name': 'Jackal, asiatic',   'Scientific': 'Canis aureus',},
+ {'Name': 'Screamer, southern',   'Scientific': 'Chauna torquata',},
+ {'Name': 'White spoonbill',  'Scientific': 'Platalea leucordia',},
+ {'Name': 'White-cheeked pintail',   'Scientific': 'Anas bahamensis',},
+ {'Name': 'Black-backed jackal',   'Scientific': 'Canis mesomelas',},
+ {'Name': 'Brolga crane',   'Scientific': 'Grus rubicundus',},
+ {'Name': 'Common melba finch',   'Scientific': 'Pytilia melba',},
+ {'Name': 'Pampa gray fox',  'Scientific': 'Pseudalopex gymnocercus',},
+ {'Name': 'Hawk-eagle, crowned',   'Scientific': 'Spizaetus coronatus',},
+ {'Name': 'Australian pelican',   'Scientific': 'Pelecanus conspicillatus',},
+];
+
+
+zooAnimals.forEach(function(element1) {
+  console.log(element1.animal_name);
+});
+
+zooAnimals.forEach(function(element2) {
+  console.log(element2.scientific_name);
+});
+
 console.log(animalNames);
 
 /* Request 2: .map()    
@@ -174,25 +195,63 @@ console.log(animalNames);
 The zoos need a list of all their animal's names (names only, not scientific) converted to lower case.  Create a new array named lowerCase and map over each name to convert them all to lower case.  Log the resut.
 
 */
+const lowerCase = [
+  "jackal, asiatic", 
+  "screamer, southern", 
+  "white spoonbill", 
+  "white-cheeked pintail", 
+  "black-backed jackal", 
+  "brolga crane", 
+  "common melba finch", 
+  "pampa gray fox", 
+  "hawk-eagle", "crowned", 
+  "australian pelican",
+];
 
-const lowerCase = [];
-console.log(lowerCase); 
+
+const newZooAnimals = zooAnimals.map(function callback(currentValue){
+  return currentValue.animal_name.toLowerCase();
+});
+console.log(newZooAnimals);
+
+
+
+
 
 /* Request 3: .filter() 
 
 The zoos are concenred about animals with a lower population count. Find out which animals have a population less than 5.
 
 */
-const largerPopulation = [];
-console.log(largerPopulation);
+const largerPopulation = [
+  {"animal_name":"Screamer, southern","population":1,"scientific_name":"Chauna torquata","state":"Alabama"},
+  {"animal_name":"White-cheeked pintail","population":1,"scientific_name":"Anas bahamensis","state":"Oregon"},
+  {"animal_name":"Black-backed jackal","population":2,"scientific_name":"Canis mesomelas","state":"Washington"},
+];
+
+
+const largerPop = zooAnimals.filter(zooAnimals => zooAnimals.population < 4);
+console.log(largerPop);
 
 /* Request 4: .reduce() 
 
 The zoos need to know their total animal population across the United States.  Find the total population from all the zoos using the .reduce() method.
 
 */
-const populationTotal = 0;
-console.log(populationTotal);
+const populationTotal = 56;
+
+const popTotal = zooAnimals.reduce(function(population, currentValue) {
+  return population + currentValue.population;
+}, 0);
+
+console.log(popTotal);
+
+
+
+
+
+
+
 
 
 /* 
